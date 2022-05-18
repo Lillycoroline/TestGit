@@ -1,0 +1,46 @@
+package javaJAVAPROGRAM;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Vowelschecking {
+	
+	//public static void main(String[] args) {
+	
+	public long vowels(String x) {
+		//String x="AUTOMATION TESTING'S PERFORMANCE ACTIVITY";
+		//char y[]=x.toCharArray();
+		//int size=y.length;
+		int size=x.length();
+		int vowelcount=0;
+		
+		
+		int i=0;
+		while(i!=size)
+		{
+			
+			
+				if (x.charAt(i)=='A'||x.charAt(i)=='E'||x.charAt(i)=='I'||x.charAt(i)=='O'||x.charAt(i)=='U')
+				{
+					++vowelcount;
+				}
+			
+			
+		++i;
+		
+			}
+			System.out.println(x.length());
+			System.out.println("Vowelcount :" +vowelcount);
+			return vowelcount;
+			
+}
+	
+	@Test
+	public void Testcase() {
+		
+		String x="AUTOMATION TESTING'S PERFORMANCE ACTIVITY";
+		 Assert.assertEquals(vowels(x), 15);
+	}
+}
+
+
