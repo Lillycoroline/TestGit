@@ -1,0 +1,35 @@
+
+public class HelloSubstringProgram {
+
+	
+		public String withoutString(String base, String remove) {
+		
+			  String newStr = "";
+			  int bLength = base.length();
+
+			      int rLength = remove.length();
+			      
+			      for (int i =0; i < bLength; i++){
+			        if (i <= bLength-rLength && base.substring(i, i+rLength).equalsIgnoreCase(remove)){
+			          i += rLength-1;
+			          continue;
+			        }
+			        newStr += base.charAt(i);
+			      }
+			      System.out.println(newStr);
+			      return newStr;
+			      
+			    
+			    }
+		
+		@Test
+		public void testcase()
+		{
+			String base="Hello There";
+			String remove="llo";
+			
+			Assert.assertEquals(withoutString( base,  remove),"He There");
+		}
+
+	}
+
