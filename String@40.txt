@@ -25,14 +25,23 @@ public class Space40 {
 				}
 			}
 			System.out.println(res);
+			
+			
 			return (res.toString());
 		}
 	
 		@Test
-		public void Testcase()
+		public void Testcase1()
 		{
 			
 			Assert.assertEquals(replaceSpaces("selenium is a tool"),"selenium@40is@40a@40tool");
+			
+	}
+	@Test
+		public void Testcase2()
+		{
+			
+			Assert.assertEquals(replaceSpaces("Testng is a Framework"),"selenium@40is@40a@40tool");
 			
 	}
 
