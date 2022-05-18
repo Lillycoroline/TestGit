@@ -44,6 +44,13 @@ public class Space40 {
 			Assert.assertEquals(replaceSpaces("Testng is a Framework"),"selenium@40is@40a@40tool");
 			
 	}
+	@Test
+		public void Testcase3()
+		{
+			
+			Assert.assertEquals(replaceSpaces("cucumber is a Framework"),"cucumber@40is@40a@40Framework");
+			
+	}
 
 	
 }
