@@ -1,0 +1,41 @@
+package jADVANCEJavaProgram;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Space40 {		
+		
+		
+		public static String replaceSpaces(String s) {
+			
+			StringBuilder res = new StringBuilder();
+
+			
+			int len = s.length();
+
+			
+			for (int i = 0; i < len; i++) {
+				
+				if (s.charAt(i) == ' ') {
+					res.append("@40");
+				}
+				
+				else {
+					res.append(s.charAt(i));
+				}
+			}
+			System.out.println(res);
+			return (res.toString());
+		}
+	
+		@Test
+		public void Testcase()
+		{
+			
+			Assert.assertEquals(replaceSpaces("selenium is a tool"),"selenium@40is@40a@40tool");
+			
+	}
+
+	
+}
+
