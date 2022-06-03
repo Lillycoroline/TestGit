@@ -1,0 +1,39 @@
+package JavaProgram;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class BaseandRemoveString {
+
+//public static void main(String[] args) {
+public String withoutString(String base, String remove) {
+ String res="";
+
+ int i=0;
+ 
+ while(i<=(base.length()-remove.length())){
+ if(base.substring(i,i+remove.length()).equalsIgnoreCase(remove))
+    {
+    i=i+remove.length();
+    continue;
+    }
+    res=res+base.charAt(i);
+    i++;
+ }
+ res=res+base.substring(i);
+ 
+ return res;
+}
+
+@Test
+
+public void testcase1()
+{
+
+String base="Hello there";
+String remove="llo";
+
+Assert.assertEquals(withoutString( base,  remove),"He there" );
+}
+
+}
