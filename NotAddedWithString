@@ -1,0 +1,36 @@
+package ajavaprogram;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AddedNOT_string {
+	
+	
+	public String notString(String str) {
+		
+		  if (str.startsWith("not"))
+		
+		    return str;
+		
+		  else
+		
+		    return "not " + str;
+		
+		}
+
+ @Test
+ public void Testcase1() {
+	 
+	 String str="candy";
+	 
+	 Assert.assertEquals(notString(str), "not candy");
+ }
+ 
+ @Test
+ public void Testcase2() {
+	 
+	 String str="x";
+	 
+	 Assert.assertEquals(notString(str), "not x");
+ }
+}
