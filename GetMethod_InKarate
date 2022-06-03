@@ -1,0 +1,16 @@
+Feature: check functionality
+Scenario: verification get method
+Given url 'https://reqres.in'
+When  method get
+Then status 200
+
+
+Scenario: verification testcase get method
+Given url 'https://reqres.in/api/unknown/2'
+When  method get
+Then status 200
+
+Scenario: verify get method
+Given url 'https://218i21l1l9.execute-api.us-east-1.amazonaws.com/testnandini?operand1=9%20&operand2=2%20&operator=*'
+When method get
+Then  status 200
