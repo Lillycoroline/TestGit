@@ -1,0 +1,24 @@
+Feature: verified scenarioOutline
+Scenario Outline: verify url
+Given url '<url>'
+When method get
+Then status 200
+Examples:
+|url|
+|https://reqres.in/api/users?page=2|
+|https://reqres.in/api/users/2|
+|https://reqres.in/api/unknown|
+|https://reqres.in/api/unknown/2|
+|https://reqres.in/api/register|
+|https://reqres.in/api/login|
+
+Scenario Outline:: verify get method
+Given url 'https://218i21l1l9.execute-api.us-east-1.amazonaws.com/testnandini?operand1=<op1>&operand2=<op2>&operator=<opresult>'
+When method get
+Then  status 200
+Examples:
+|op1|op2|opresult|
+|4|5|*|
+|32|25|-|
+|45|5|/|
+|3|4|+|
