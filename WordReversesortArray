@@ -1,0 +1,35 @@
+package javaJAVAPROGRAM;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class WordArraysort {
+	
+
+	
+	public String check(String s)
+	{
+	String[] st=s.split("\\s");
+	String rev="";
+	for(String w:st){  
+	        StringBuilder sb=new StringBuilder(w);  
+	        sb.reverse();  
+	        rev+=sb.toString()+" ";  
+	    }  
+	    return rev.trim();
+	}
+	@Test
+	public void test1()
+	{
+	String s="reverse every word";
+	Assert.assertEquals(check(s), "esrever yreve drow");
+	}
+	@Test
+	public void test2()
+	{
+	String s="this is automation testing";
+	Assert.assertEquals(check(s), "siht si noitamotua gnitset");
+	}
+	}
+
+
