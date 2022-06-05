@@ -1,0 +1,52 @@
+package javaJAVAPROGRAM;
+
+import java.util.Arrays;
+
+import org.apache.log4j.chainsaw.Main;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class array {
+
+	//public static void main(String[] args) {
+		
+		public static  String Arraysort(String x) {
+		
+		//String x="cabccbab";	
+		
+		char[] y=x.toCharArray();
+          Arrays.sort(y);
+          
+          String rev=" ";
+
+
+StringBuffer buffer=new StringBuffer();
+buffer.append(y);
+
+
+
+System.out.println(buffer.reverse());
+
+rev+=buffer.toString();
+return rev.trim();	  
+	  
+	
+				  
+	}	
+
+		
+		
+	
+	
+
+@Test
+public void testcase1()
+
+{	
+	String x="cccbab";	
+	Assert.assertEquals(Arraysort(x),"cccbba");	
+
+}
+
+}
