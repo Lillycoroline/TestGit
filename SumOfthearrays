@@ -1,0 +1,17 @@
+package javaJAVAPROGRAM;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class sum_of_Elements {
+	
+	public int sum3(int[] nums) {
+	    return nums[0] + nums[1] + nums[2];
+	}
+
+	@Test
+	public void testcase() {
+		int[] nums= {1,2,3};
+		Assert.assertEquals(sum3( nums) , 6);
+	}
+}
