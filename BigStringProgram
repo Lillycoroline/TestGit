@@ -1,0 +1,45 @@
+package javaJAVAPROGRAM;
+
+import java.util.Arrays;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Word_and_separatorString {
+
+	//public static void main(String[] args) {
+		
+		public String repeatSeparator(String word, String sep, int count) {
+
+		 String newWord = "";
+		
+		    
+		 
+		   for (int i = 0; i < count; i++) {
+	
+		     if (i < count-1)
+		
+		       newWord += word + sep;
+		
+		     else
+		
+		       newWord += word;
+		 
+		   }
+		
+		   return newWord;
+
+	}
+		
+		@Test
+		
+		public void Testcase() {
+			
+			String word="word";
+			
+			String sep="x";
+			int count=3;
+			Assert.assertEquals(repeatSeparator( word,  sep,  count), "wordxwordxword");
+		}
+
+}
